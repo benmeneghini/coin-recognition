@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog
-from recognition import recognise
+from detect import detection
 
 def recognise_from_image():
     # Create a file dialog to select an image
@@ -11,7 +11,7 @@ def recognise_from_image():
     if not file_path:
         return 
     
-    recognise(file_path)
+    detection(file_path)
     root.destroy()
 
 

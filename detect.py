@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 from preprocess import adjust_contrast
 
-def recognise(image_path):
+def detection(image_path):
     # Preprocess and read the image from the image path.
     image = adjust_contrast(image_path)
 
@@ -16,6 +16,6 @@ def recognise(image_path):
         cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(image, f'{label} {conf:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-    cv2.imshow("Coin Recognition", image)
+    cv2.imshow("Face Mask Detection", image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
