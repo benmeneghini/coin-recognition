@@ -1,1 +1,1 @@
-# waste-management-detection
+# coin-recognition
