@@ -19,9 +19,9 @@ def adjust_contrast(image_path):
     # Convert the image from uint8 to float to avoid overflow/underflow
     image = image.astype(np.float64)
 
-    # Adjust contrast and brightness
+    # Adjust contrast and brightness using `f(x) = alpha * x + beta` formula
     image = image * ALPHA + BETA
-    # Clip values to stay within the 0-255 range and convert back to uint8
+    # Clamp values to stay within the 0-255 range and convert back to uint8
     image = np.clip(image, 0, 255).astype(np.uint8)
 
     return image
