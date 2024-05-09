@@ -9,13 +9,11 @@ OG_DIRECTORY = "datasets/original/"
 PP_DIRECTORY = "datasets/preprocessed/"
 
 
-def adjust_contrast(image_path):
+def adjust_contrast(image):
     """
     Adjusts the contrast and brightness of an image from an
     image path and variables: alpha, and beta.
     """
-    # Read the image
-    image = cv2.imread(image_path)
     # Convert the image from uint8 to float to avoid overflow/underflow
     image = image.astype(np.float64)
 

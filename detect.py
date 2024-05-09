@@ -6,7 +6,7 @@ from ultralytics.utils.plotting import Annotator
 
 def detection(image):
     # Preprocess and read the image from the image path.
-    # image = adjust_contrast(image_path)
+    # image = adjust_contrast(image)
 
     model = YOLO('runs/detect/yolov8n_custom/weights/best.pt')
     res = model.predict(image, imgsz=640)
