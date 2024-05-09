@@ -3,6 +3,9 @@ from detect import detection
 
 
 def get_live_feed():
+    """
+    Method to get the live feed from the webcam and detect faces with or without masks in real-time.
+    """
     cap = cv2.VideoCapture(0)
     while True:
         ret, frame = cap.read()

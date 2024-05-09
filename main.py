@@ -3,6 +3,9 @@ from image_picker import detect_from_image
 from live_feed import get_live_feed
 
 def run():
+    """
+    Main method to run the application.
+    """
     root = tk.Tk()
     root.title("Face Mask Detector")
     root.geometry("300x150")

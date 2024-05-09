@@ -2,6 +2,9 @@ import numpy as np
 
 
 def non_maximum_suppression(boxes, scores, classes, iou_threshold):
+    """
+    Non-Maximum Suppression algorithm to filter out overlapping boxes.
+    """
     unique_classes = np.unique(classes)
     selected_boxes = []
     selected_scores = []
@@ -36,6 +39,9 @@ def non_maximum_suppression(boxes, scores, classes, iou_threshold):
 
 
 def compute_iou(boxA, boxB):
+    """
+    Compute the Intersection over Union (IoU) of two bounding boxes.
+    """
     # Coordinates of the intersection rectangle
     xA = max(boxA[0], boxB[0])
     yA = max(boxA[1], boxB[1])

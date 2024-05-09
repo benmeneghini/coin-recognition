@@ -5,6 +5,10 @@ from filter import non_maximum_suppression
 import numpy as np
 
 def detection(image):
+    """
+    Detection method that uses the YOLO model to detect faces with or without masks.
+    Applies Non-Maximum Suppression to filter out overlapping boxes.
+    """
     model = YOLO('runs/detect/yolov8n_custom/weights/best.pt')
     res = model.predict(image, imgsz=640)
 

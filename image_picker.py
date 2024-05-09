@@ -4,6 +4,9 @@ from detect import detection
 import cv2
 
 def detect_from_image():
+    """
+    Method to select an image from the file dialog and run the detection function on it.
+    """
     # Create a file dialog to select an image
     root = tk.Tk()
     root.withdraw()
