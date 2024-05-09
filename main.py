@@ -15,6 +15,9 @@ def run():
     detect_button = tk.Button(root, text="Detect with Image", command=detect_from_image)
     detect_button.pack(pady=15)
 
+    # If ESC key is pressed, close the window
+    root.bind("<Escape>", lambda e: root.quit())
+
     root.mainloop()
 
 
