@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 from detect import detection
 
-def recognise_from_image():
+def detect_from_image():
     # Create a file dialog to select an image
     root = tk.Tk()
     root.withdraw()
