@@ -1,13 +1,10 @@
 import cv2
 from ultralytics import YOLO
-from preprocess import adjust_contrast
 from ultralytics.utils.plotting import Annotator
 import tensorflow as tf
 
 
 def detection(image):
-    # Preprocess and read the image from the image path.
-    # image = adjust_contrast(image)
 
     model = YOLO('runs/detect/yolov8n_custom/weights/best.pt')
     res = model.predict(image, imgsz=640)
