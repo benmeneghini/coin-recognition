@@ -1,7 +1,7 @@
 # Face Mask Detection
 
 ## Project Overview
-This project leverages a YOLOv8 model for detecting face masks on individuals in real-time or saved images. Using Python and OpenCV, this application identifies faces in video streams or images and classifies them into two categories: 'mask' or 'no-mask'.
+This project leverages a YOLOv8 model for detecting face masks on individuals in real-time or saved images. Using Python and OpenCV, this application identifies faces in video streams or images and classifies them into two categories: 'mask' or 'no-mask' along with a confidence score.
 
 ## Features
 - Real-time face mask detection.
