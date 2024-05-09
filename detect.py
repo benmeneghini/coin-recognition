@@ -37,7 +37,7 @@ def detection(image):
         conf = filtered_scores[i]
         cls = filtered_classes[i]
         label = model.names[cls] + f"-{conf:.2f}"
-        annotator.box_label(box_coords, label)
+        annotator.box_label(box_coords, label, color=(255, 0, 0) if cls == 0 else (0, 0, 255))
 
     image = annotator.result()
     cv2.imshow("Face Mask Detection", image)
