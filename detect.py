@@ -2,6 +2,7 @@ import cv2
 from ultralytics import YOLO
 from preprocess import adjust_contrast
 from ultralytics.utils.plotting import Annotator
+import tensorflow as tf
 
 
 def detection(image):
@@ -17,8 +18,11 @@ def detection(image):
         boxes = result.boxes
         for box in boxes:
             box_coords = box.xyxy[0]
-            cls = box.cls
-            annotator.box_label(box_coords, model.names[int(cls)])
+            cls = int(box.cls)
+            conf = float(box.conf)
+            print(conf)
+            label = model.names[cls] + f"-{conf:.2f}"
+            annotator.box_label(box_coords, label)
 
     image = annotator.result()
     cv2.imshow("Face Mask Detection", image)

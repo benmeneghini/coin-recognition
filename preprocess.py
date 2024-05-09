@@ -1,6 +1,6 @@
 import numpy as np
 
-ALPHA = 1.5 # Contrast control (1.5 increases contrast)
+ALPHA = 0.2 # Contrast control (1.5 increases contrast)
 BETA = 0 # Brightness control (0 has no effect)
 
 OG_DIRECTORY = "datasets/original/"
