@@ -6,10 +6,9 @@ test: test/images
 nc: 2
 names: ['mask', 'no-mask']
 
-# Dataset attribution to:
 roboflow:
-  workspace: joseph-nelson
-  project: mask-wearing
-  version: 19
+  workspace: 428data
+  project: mask-wearing-sc745
+  version: 4
   license: Public Domain
-  url: https://universe.roboflow.com/joseph-nelson/mask-wearing/dataset/19
+  url: https://app.roboflow.com/428data/mask-wearing-sc745/4
