@@ -19,6 +19,7 @@ def detection(image):
 
     for result in res:
         for box in result.boxes:
+            print(box.xyxy)
             box_coords = box.xyxy[0].numpy()  # Convert to numpy array
             cls = int(box.cls)
             conf = float(box.conf)

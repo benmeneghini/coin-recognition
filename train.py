@@ -11,5 +11,3 @@ def train_model():
 
     # Can add augmentation parameters here to improve model accuracy
     results = model.train(data='faces_v8.yaml', imgsz=640, epochs=20, name='yolov8n_custom')
-
-train_model()
