@@ -41,27 +41,4 @@ def detection(image):
 
     image = annotator.result()
     cv2.imshow("Face Mask Detection", image)
-
-
-# ! DETECTION FUNCTION WITHOUT NON-MAXIMUM SUPPRESSION APPLIED (KEEPING FOR LATER COMPARISON)
-
-# def detection(image):
-
-#     model = YOLO('runs/detect/yolov8n_custom/weights/best.pt')
-#     res = model.predict(image, imgsz=640)
-
-#     for result in res:
-#         annotator = Annotator(image)
-
-#         boxes = result.boxes
-#         for box in boxes:
-#             box_coords = box.xyxy[0]
-#             cls = int(box.cls)
-#             conf = float(box.conf)
-#             print(conf)
-#             label = model.names[cls] + f"-{conf:.2f}"
-#             annotator.box_label(box_coords, label)
-
-#     image = annotator.result()
-#     cv2.imshow("Face Mask Detection", image)
         
